@@ -16,12 +16,11 @@
 	</div>
 	</center>
 
-
 <script type="text/javascript">
 	var dice1;
 	var dice2;
 	var diceTotal;
-	var number2;
+	var point;
 	var counter = 0;
 
 	function diceRoll(){
@@ -41,8 +40,7 @@
 			} else {
 				document.getElementById("showImage").innerHTML = "Your first dice is <br><img src='images/" + dice1 + ".png'/> <br>and second dice is <br><img src='images/" + dice2 + ".png'/> <br>and total is " + diceTotal;
 				counter++;
-
-				number2 = diceTotal;
+				point = diceTotal;
 			}
 		}
 	}
@@ -56,12 +54,12 @@
 		diceTotal = dice1 + dice2;
 
 		if(diceTotal == 7 || diceTotal == 11){
-			counter = number2;
+			counter = point;
 			resetGame();
-		} else if(diceTotal == number2) {
+		} else if(diceTotal == point) {
 			document.getElementById("showImage").innerHTML = "Booo! You are a winner... Your first dice is <br><img src='images/" + dice1 + ".png'/> <br>and second dice is <br><img src='images/" + dice2 + ".png'/> <br>and total is " + diceTotal;
 		} else {
-			document.getElementById("showImage").innerHTML = "Your first dice is <br><img src='images/" + dice1 + ".png'/><br> and second dice is <br><img src='images/" + dice2 + ".png'/> <br>and total is " + diceTotal + ". Let's try again..."  + ". It should be " + number2;
+			document.getElementById("showImage").innerHTML = "Your first dice is <br><img src='images/" + dice1 + ".png'/><br> and second dice is <br><img src='images/" + dice2 + ".png'/> <br>and total is " + diceTotal + ". Let's try again..."  + ". It should be " + point;
 				counter++;
 		}
 	}
@@ -84,10 +82,7 @@
 		dice1 = 0;
 		dice2 = 0;
 		diceTotal = 0;
-		
-		counter = 0;
-
-		
+		counter = 0;	
 	}
 
 </script>

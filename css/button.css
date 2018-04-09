@@ -6,6 +6,12 @@ src: url("font/prstart.ttf");
 body{
 	font-family: prstart;
 }
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
 
 .btn {
     background-color: #4CAF50;
